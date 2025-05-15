@@ -9,6 +9,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
+
 def test_opentaskpage():
     # Указываем полный путь к chromedriver.exe
     driver_path = os.path.abspath("webdriver/chromedriver.exe")  # или r"webdriver\chromedriver.exe"
@@ -23,21 +24,18 @@ def test_opentaskpage():
         log_in.click()
         # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         WebDriverWait(driver, 3)
-        #находим наш span и делаем его кликабельным
+
         span_text = "Создать задачу"
         span_element = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, f"//span[text()='{span_text}']"))
         )
         span_element.click()
 
-        # 1. Ждем модальное окно
         modal = WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//*[contains(@style, 'z-index') and number(substring-before(substring-after(@style, 'z-index:'), ';')) > 2399]")))
         
-        # 2. Находим input через `for`
         input_field = modal.find_element(By.ID, "input-0")
         
-        # 4. Взаимодействие
         input_field.click()
         input_field.send_keys("new autotask case №1")
 
@@ -45,9 +43,23 @@ def test_opentaskpage():
         span_task = WebDriverWait(modal, 10).until(
             EC.element_to_be_clickable((By.XPATH, f".//span[text()='{span_btn}']"))
         )
+        WebDriverWait(driver, 10)
         span_task.click()
-        
-        assert "new autotask case №1" in driver.page_source
 
+        WebDriverWait(driver, 10)
+
+        task_btn= WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.ID, "1"))
+        )
+        task_btn.click()
+              
+        driver.execute_script("window.scrollBy(0, 1000);")
+
+        new_task= WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'new autotask case №1')]"))
+        )
+        assert new_task, "Элемент с точным текстом 'case №1' не найден"
+
+        # assert "case №1" in driver.page_source
     add_task_noproject_case1(driver)
     driver.quit()
