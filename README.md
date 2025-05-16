@@ -40,15 +40,6 @@
 
 > `В принципе это все что тебе нужно чтобы запустить автотесты на новой машине`
 
-
-Ссылка на скачивание автотестов `тоже добавлю позже`
-
-- [Кейсы авторизации](https://gitlab.spoarktika.ru/ovis/brp/cats/missions-and-projects/-/wikis/%D0%90%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D1%8B/%7Bnew_page_title%7D%D0%9A%D0%B5%D0%B9%D1%81%D1%8B-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8)
-
-- [Кейсы задач](https://gitlab.spoarktika.ru/ovis/brp/cats/missions-and-projects/-/wikis/%D0%90%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D1%8B/%7Bnew_page_title%7D%D0%9A%D0%B5%D0%B9%D1%81%D1%8B-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87)
-
-- [Кейсы проектов](https://gitlab.spoarktika.ru/ovis/brp/cats/missions-and-projects/-/wikis/%D0%90%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D1%8B/%7Bnew_page_title%7D%D0%9A%D0%B5%D0%B9%D1%81%D1%8B-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2)
-
 > P.s не знаю как в других окружениях но для `VS Code` для правильного отображения автотестов во вкладке `Тестирование` есть определенное правило. Название автотеста в конце обязательно должно содержать `..._test.py`  
 
 ![image](uploads/af7797704a9d12ccfe93f1a7fbed924c/image.png){width=368 height=297}
