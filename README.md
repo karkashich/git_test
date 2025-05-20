@@ -242,35 +242,35 @@
 
 <details><summary>Кейс задачи №6</summary>
 
-`ID` 8
+    `ID` 8
 
-`Title` Добавление задачи в проект
+    `Title` Добавление задачи в проект
 
-`Title autotest` add_task_toproject_case№4_test.py
+    `Title autotest` add_task_toproject_case№4_test.py
 
-`Type` Позитивный
+    `Type` Позитивный
 
-> Preconditions
+    > Preconditions
 
-Наличие проекта Autotest project на аккаунте проверяющего
+    Наличие проекта Autotest project на аккаунте проверяющего
 
-> Шаги воспроизведения
+    > Шаги воспроизведения
 
-1. 1. Зайти в приложение
-2. Нажать на кнопку "Создать задачу" в боковом меню
-3. Заполнить в форме добавления название "task to project"
-4. Добавить задачу в проект "Autotest project" 
-5. Нажать на кнопку " Создать "
-6. Зайти в проекте "Autotest project"
-7. Проверить наличие задачи "task to project" в проекте
+    1. 1. Зайти в приложение
+    2. Нажать на кнопку "Создать задачу" в боковом меню
+    3. Заполнить в форме добавления название "task to project"
+    4. Добавить задачу в проект "Autotest project" 
+    5. Нажать на кнопку " Создать "
+    6. Зайти в проекте "Autotest project"
+    7. Проверить наличие задачи "task to project" в проекте
 
 
-> Ожидаемый результат
+    > Ожидаемый результат
 
-Задача "task to project" находится в проекте "Autotest project"
+    Задача "task to project" находится в проекте "Autotest project"
 
-> Post conditions
+    > Post conditions
 
-Удалить задачу/переименовать 
+    Удалить задачу/переименовать 
 
 </details>
