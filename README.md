@@ -240,7 +240,7 @@
 
 </details>
 
-<details><summary>Кейс задачи №5</summary>
+<details><summary>Кейс задачи №6</summary>
 
 `ID` 8
 
