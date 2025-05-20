@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
-def test_opentaskpage():
+def test_501_task_name():
     # Указываем полный путь к chromedriver.exe
     driver_path = os.path.abspath("webdriver/chromedriver.exe")  # или r"webdriver\chromedriver.exe"
     service = Service(executable_path=driver_path)
@@ -29,7 +29,6 @@ def test_opentaskpage():
             EC.element_to_be_clickable((By.XPATH, f"//span[text()='{span_text}']"))
         )
         span_element.click()
-        
 
         modal = WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//*[contains(@style, 'z-index') and number(substring-before(substring-after(@style, 'z-index:'), ';')) > 2399]")))
@@ -37,8 +36,9 @@ def test_opentaskpage():
         input_field = modal.find_element(By.ID, "input-0")
         
         input_field.click()
-        input_field.send_keys("new autotask in project case №3")
-        
+        input_field.send_keys("taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№3")
+
+        # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
         span_btn = " Создать "
         span_task = WebDriverWait(modal, 10).until(
@@ -48,6 +48,24 @@ def test_opentaskpage():
 
         WebDriverWait(driver, 10)
 
-        assert "new autotask case №1" in driver.page_source
+
+
+        
+        WebDriverWait(driver, 10)
+
+        task_btn= WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.ID, "1"))
+        )
+        task_btn.click()
+              
+        # driver.execute_script("window.scrollBy(0, 1000);")
+
+        new_task= WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№3')]"))
+        )
+        assert new_task
+
+        
+
     add_task_noproject_case1(driver)
     driver.quit()
