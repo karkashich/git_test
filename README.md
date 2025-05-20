@@ -176,6 +176,8 @@
 
 <details><summary>Кейс задачи №4</summary>
 
+
+
     `ID` 6
 
     `Title` Удаление задачи через карточку задачи
@@ -204,6 +206,8 @@
     > Post conditions
 
     Постусловий нет
+
+    
 
 </details>
 
