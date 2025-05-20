@@ -46,44 +46,63 @@
 
 > Тест кейсы
 
-<details><summary>Кейсы авторизации</summary>
+<details><summary>Кейс авторизации №1</summary>
 
-    <details><summary>Кейс №1</summary>
+`ID` 1
 
-    
-    `ID` 1
+`Title` Авторизация при помощи windows входа
 
-    `Title` Авторизация при помощи windows входа
+`Title autotest` key_cloak_windowslogin_test.py
 
-    `Title autotest` key_cloak_windowslogin_test.py
+`Type` Позитивный
 
-    `Type` Позитивный
+>Preconditions 
 
-    >Preconditions 
+Не выполнен вход в приложение "Задачи и проекты"
 
-    Не выполнен вход в приложение "Задачи и проекты"
+> Шаги воспроизведения
 
-    > Шаги воспроизведения
+1. Перейти в веб-приложение "Задачи и проекты"
+2. Нажать на кнопку "Windows вход"
 
-    1. Перейти в веб-приложение "Задачи и проекты"
-    2. Нажать на кнопку "Windows вход"
+> Ожидаемый результат
 
-    > Ожидаемый результат
+Был выполнен успешный вход в систему
 
-    Был выполнен успешный вход в систему
+>Post conditions
 
-    >Post conditions
+Очистка кеша/выход из приложения
 
-    Очистка кеша/выход из приложения
-
-    </details>
 
 </details>
 
-<details><summary>Кейсы задач</summary>
+<details><summary>Кейс задач №1</summary>
 
-    <details><summary>Кейс №1</summary>
+`ID` 3
 
-    </details>
+`Title` Добавление задачи через боковое меню
+
+`Title autotest` add_task_noproject_case1_test.py
+
+`Type` Позитивный
+
+> Preconditions
+
+Предусловий нет
+
+> Шаги воспроизведения
+
+1. Зайти в приложение
+2. Нажать на кнопку "Создать задачу" в боковом меню
+3. Заполнить в форме добавления название "new autotask case №1"
+4. Нажать на кнопку " Создать "
+
+> Ожидаемый результат
+
+Задача с названием "new autotask case №1" была успешно добавлена и отображается в списке задач
+
+> Post conditions
+
+Постусловий нет
 
 </details>
