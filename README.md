@@ -44,4 +44,46 @@
 
 ![image](https://github.com/user-attachments/assets/4ff1f9a4-0564-4c5a-b021-708845ec63aa)
 
+> Тест кейсы
 
+<details><summary>Кейсы авторизации</summary>
+
+    <details><summary>Кейс №1</summary>
+
+    
+    `ID` 1
+
+    `Title` Авторизация при помощи windows входа
+
+    `Title autotest` key_cloak_windowslogin_test.py
+
+    `Type` Позитивный
+
+    >Preconditions 
+
+    Не выполнен вход в приложение "Задачи и проекты"
+
+    > Шаги воспроизведения
+
+    1. Перейти в веб-приложение "Задачи и проекты"
+    2. Нажать на кнопку "Windows вход"
+
+    > Ожидаемый результат
+
+    Был выполнен успешный вход в систему
+
+    >Post conditions
+
+    Очистка кеша/выход из приложения
+
+    </details>
+
+</details>
+
+<details><summary>Кейсы задач</summary>
+
+    <details><summary>Кейс №1</summary>
+
+    </details>
+
+</details>
