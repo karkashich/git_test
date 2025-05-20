@@ -50,7 +50,7 @@
 
 # Тест кейсы
 
-<details><summary> # Кейс авторизации №1</summary>
+<details><summary>Кейс авторизации №1</summary>
 
 `ID` 1
 
