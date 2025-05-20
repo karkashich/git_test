@@ -51,7 +51,7 @@
 # Тест кейсы
 ## Кейсы авторизации
 
-- <details><summary>Кейс авторизации №1</summary>
+<details><summary>Кейс авторизации №1</summary>
 
 `ID` 1
 
@@ -84,7 +84,7 @@
 ## Кейсы задач
 
 
-- <details><summary>Кейс задачи №1</summary>
+<details><summary>Кейс задачи №1</summary>
 
 `ID` 3
 
