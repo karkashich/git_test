@@ -23,7 +23,7 @@ def test_opentaskpage():
         log_in = wait.until(EC.presence_of_element_located((By.ID, "social-keycloak-oidc")))
         log_in.click()
         # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-        WebDriverWait(driver, 3)
+        WebDriverWait(driver, 10)
 
         span_text = "Создать задачу"
         span_element = WebDriverWait(driver, 10).until(
@@ -53,12 +53,16 @@ def test_opentaskpage():
         )
         task_btn.click()
               
-        driver.execute_script("window.scrollBy(0, 1000);")
+        # driver.execute_script("window.scrollBy(0, 1000);")
+
+        WebDriverWait(driver, 10)
+
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
         new_task= WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'new autotask case №1')]"))
         )
-        assert new_task, "Элемент с точным текстом 'case №1' не найден"
+        assert new_task
 
         # assert "case №1" in driver.page_source
     add_task_noproject_case1(driver)

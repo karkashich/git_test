@@ -26,10 +26,13 @@ def test_deletetask():
 
         driver.get("https://portal.test.app/#/projects/missions/5")
 
+        WebDriverWait(driver, 10)
+
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
         task_from_case1 = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, "//a[text()='new autotask case №1']"))
         )
-
         task_from_case1 = driver.find_element(By.XPATH, "//a[text()='new autotask case №1']")
         task_from_case1.click()
 
@@ -40,20 +43,15 @@ def test_deletetask():
                 driver.switch_to.window(window_handle)
                 break
 
-
         delete_btn = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, f".//span[text()='Удалить']"))
         )
-
         delete_btn.click()
 
         delete_btn = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, f".//span[text()=' Удалить']"))
         )
-
         delete_btn.click()
-
-
 
         assert WebDriverWait(driver, 10).until(
             EC.invisibility_of_element_located((By.XPATH, "//*[contains(text(), 'new autotask case №1')]"))
