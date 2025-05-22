@@ -1,3 +1,4 @@
+import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
@@ -8,16 +9,20 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.chrome.service import Service  
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.options import Options  
 
-def test_501_task_name():
+def test_empty_task_name():
     # Указываем полный путь к chromedriver.exe
     driver_path = os.path.abspath("webdriver/chromedriver.exe")  # или r"webdriver\chromedriver.exe"
     service = Service(executable_path=driver_path)
     driver = webdriver.Chrome(service=service)
     driver.maximize_window()
+    
 
     def add_task_noproject_case1(driver):
+        
         driver.get("https://portal.test.app/#/projects/missions/5")
+        
         # обязательный блок так как вход не запоминается \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         wait = WebDriverWait(driver, 10)
         log_in = wait.until(EC.presence_of_element_located((By.ID, "social-keycloak-oidc")))
@@ -31,13 +36,13 @@ def test_501_task_name():
         )
         span_element.click()
 
-        modal = WebDriverWait(driver, 20).until(
+        modal = WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//*[contains(@style, 'z-index') and number(substring-before(substring-after(@style, 'z-index:'), ';')) > 2399]")))
         
-        input_field = modal.find_element(By.ID, "input-0")
+        # input_field = modal.find_element(By.ID, "input-0")
         
-        input_field.click()
-        input_field.send_keys("taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2t")
+        # input_field.click()
+        # input_field.send_keys("taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2t")
 
         # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -50,7 +55,7 @@ def test_501_task_name():
         WebDriverWait(driver, 10)
 
         validation_error= WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Максимальная длина наименования - 500 символов')]"))
+            EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Введите наименование задачи')]"))
         )
         assert validation_error
 

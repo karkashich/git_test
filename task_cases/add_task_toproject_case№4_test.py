@@ -14,6 +14,7 @@ def test_add_task_to_project():
     driver_path = os.path.abspath("webdriver/chromedriver.exe")  # или r"webdriver\chromedriver.exe"
     service = Service(executable_path=driver_path)
     driver = webdriver.Chrome(service=service)
+    driver.maximize_window()
 
     def add_task_noproject_case1(driver):
         driver.get("https://portal.test.app/#/projects/missions/5")

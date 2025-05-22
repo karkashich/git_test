@@ -15,6 +15,7 @@ def test_opentaskpage():
     driver_path = os.path.abspath("webdriver/chromedriver.exe")  # или r"webdriver\chromedriver.exe"
     service = Service(executable_path=driver_path)
     driver = webdriver.Chrome(service=service)
+    driver.maximize_window()
 
     def add_task_noproject_case1(driver):
         driver.get("https://portal.test.app/#/projects/missions/5")
@@ -34,7 +35,9 @@ def test_opentaskpage():
         modal = WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//*[contains(@style, 'z-index') and number(substring-before(substring-after(@style, 'z-index:'), ';')) > 2399]")))
         
-        input_field = modal.find_element(By.ID, "input-0")
+        wait = WebDriverWait(driver, 20)
+
+        input_field = modal.find_element(By.XPATH, "//input[starts-with(@id, 'input-')]")
         
         input_field.click()
         input_field.send_keys("new autotask case №1")
@@ -46,7 +49,13 @@ def test_opentaskpage():
         WebDriverWait(driver, 10)
         span_task.click()
 
+        wait = WebDriverWait(driver, 20)
+
         WebDriverWait(driver, 10)
+        
+        driver.refresh()
+
+        driver.get("https://portal.test.app/#/projects/missions/5")
 
         task_btn= WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.ID, "1"))
@@ -54,6 +63,10 @@ def test_opentaskpage():
         task_btn.click()
               
         # driver.execute_script("window.scrollBy(0, 1000);")
+
+        WebDriverWait(driver, 10)
+
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
         WebDriverWait(driver, 10)
 

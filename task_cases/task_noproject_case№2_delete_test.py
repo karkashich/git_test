@@ -15,6 +15,9 @@ def test_deletetask():
     service = Service(executable_path=driver_path)
     driver = webdriver.Chrome(service=service)
 
+    driver.maximize_window()
+
+
     def add_task_noproject_case1(driver):
         print('nachalo')
         driver.get("https://portal.test.app/#/projects/missions/5")
@@ -25,6 +28,10 @@ def test_deletetask():
         # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
         driver.get("https://portal.test.app/#/projects/missions/5")
+
+        WebDriverWait(driver, 10)
+
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
         task_from_case1 = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, "//a[text()='taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№2taskcase№3']"))
