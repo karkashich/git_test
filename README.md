@@ -287,7 +287,7 @@
 
 </details>
 
-<details><summary>Кейс задачи №6</summary>
+<details><summary>Кейс задачи №7</summary>
 
 `ID` 9
 
