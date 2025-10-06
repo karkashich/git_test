@@ -1,0 +1,16 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bea44f57_002D23ef_002D40d6_002Dbd7b_002D9e4e8f0987c5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from ProjectCreationSuccessAndThanDelete.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:ProjectCreationSuccessAndThanDelete.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:ProjectCreationValidation.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:AddProjectReportAndThenDelete.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:AddProjectTask1.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:TaskCreatonBasedOn.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:TaskCreationInProjectAndThenDeleteByContextMenu.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:AddProjectParticipants.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:AddProjectMilestone.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:AddProjectResource.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:ProjectAddResourceThanDelete.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;3FDE7AD9-A17F-73CA-FA06-ED1CBD39896E/f:ProjectCreateMilestone.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

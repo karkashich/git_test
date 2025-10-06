@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="NuGet.config" />
+    <File Path="global.json" />
+    <File Path="Directory.Packages.props" />
+    <File Path="Directory.Build.props" />
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="SeleniumTests\SeleniumTests.csproj" Type="Classic C#" />
+  </Folder>
+</Solution>

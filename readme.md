@@ -1,0 +1,1 @@
+[Не знаешь что за зверь в папке читай доку](https://gitlab.spoarktika.ru/ovis/brp/cats/missions-and-projects/-/wikis/%D0%90%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D1%8B)
